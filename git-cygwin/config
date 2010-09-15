@@ -1,0 +1,24 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[gui]
+	wmstate = normal
+	geometry = 1302x711+108+74 191 169
+[diff]
+	tool = wrapper
+[merge]
+	tool = wrapper
+[difftool]
+	prompt = false
+[difftool "wrapper"]
+	cmd = git-diff-wrapper.sh $LOCAL $REMOTE
+[mergetool "wrapper"]
+	cmd = git-merge-wrapper.sh $LOCAL $REMOTE $BASE $MERGED
+[remote "clearcase"]
+	url = /cygdrive/z/etcsc/soft/appli/git_repo/src
+	fetch = +refs/heads/*:refs/remotes/clearcase/*
+[color]
+	ui = auto
